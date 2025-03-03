@@ -1,0 +1,16 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Smart contracts for evidence management",
+  "main": "truffle-config.js",
+  "scripts": {
+    "test": "truffle test"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^2.1.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "truffle": "^5.11.5"
+  }
+}

@@ -1,0 +1,4183 @@
+{
+  "contractName": "EvidenceTracker",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "evidences",
+      "outputs": [
+        {
+          "name": "ipfsHash",
+          "type": "string"
+        },
+        {
+          "name": "caseId",
+          "type": "uint256"
+        },
+        {
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "firs",
+      "outputs": [
+        {
+          "name": "ipfsHash",
+          "type": "string"
+        },
+        {
+          "name": "officer",
+          "type": "address"
+        },
+        {
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "name": "isOpen",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "firId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "ipfsHash",
+          "type": "string"
+        }
+      ],
+      "name": "FIRCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "evidenceId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "caseId",
+          "type": "uint256"
+        }
+      ],
+      "name": "EvidenceAdded",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_ipfsHash",
+          "type": "string"
+        }
+      ],
+      "name": "createFIR",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_caseId",
+          "type": "uint256"
+        },
+        {
+          "name": "_ipfsHash",
+          "type": "string"
+        }
+      ],
+      "name": "addEvidence",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_firId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getFIR",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_evidenceId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getEvidence",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_caseId\",\"type\":\"uint256\"},{\"name\":\"_ipfsHash\",\"type\":\"string\"}],\"name\":\"addEvidence\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"evidences\",\"outputs\":[{\"name\":\"ipfsHash\",\"type\":\"string\"},{\"name\":\"caseId\",\"type\":\"uint256\"},{\"name\":\"timestamp\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_ipfsHash\",\"type\":\"string\"}],\"name\":\"createFIR\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"firs\",\"outputs\":[{\"name\":\"ipfsHash\",\"type\":\"string\"},{\"name\":\"officer\",\"type\":\"address\"},{\"name\":\"timestamp\",\"type\":\"uint256\"},{\"name\":\"isOpen\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_evidenceId\",\"type\":\"uint256\"}],\"name\":\"getEvidence\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_firId\",\"type\":\"uint256\"}],\"name\":\"getFIR\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"},{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"firId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"ipfsHash\",\"type\":\"string\"}],\"name\":\"FIRCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"evidenceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"caseId\",\"type\":\"uint256\"}],\"name\":\"EvidenceAdded\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Evidence.sol\":\"EvidenceTracker\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Evidence.sol\":{\"keccak256\":\"0xea37aa2c778b8422c15de4fd91e15b27b2e2737b7f6df88916a173387a232317\",\"urls\":[\"bzzr://9ca651368c2e3ef68c4245ca788da295c2c1d87a70474fdffcb5552e3d15d661\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610af2806100206000396000f3fe6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631c3665eb811461007c5780632e4546cd146101385780639548ec7c146101e8578063a4de172d1461029b578063c956f14314610382578063f1a5c418146103ac575b600080fd5b34801561008857600080fd5b506101366004803603604081101561009f57600080fd5b813591908101906040810160208201356401000000008111156100c157600080fd5b8201836020820111156100d357600080fd5b803590602001918460018302840111640100000000831117156100f557600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506103d6945050505050565b005b34801561014457600080fd5b506101626004803603602081101561015b57600080fd5b5035610499565b6040518080602001848152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156101ab578181015183820152602001610193565b50505050905090810190601f1680156101d85780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b3480156101f457600080fd5b506101366004803603602081101561020b57600080fd5b81019060208101813564010000000081111561022657600080fd5b82018360208201111561023857600080fd5b8035906020019184600183028401116401000000008311171561025a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610556945050505050565b3480156102a757600080fd5b506102c5600480360360208110156102be57600080fd5b50356106e2565b60405180806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200184815260200183151515158152602001828103825286818151815260200191508051906020019080838360005b8381101561034457818101518382015260200161032c565b50505050905090810190601f1680156103715780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b34801561038e57600080fd5b50610162600480360360208110156103a557600080fd5b50356107c1565b3480156103b857600080fd5b506102c5600480360360208110156103cf57600080fd5b50356108b7565b60408051606081018252828152602080820185905242928201929092526001805480820180835560009290925282518051929460039092027fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6019261043e92849201906109e2565b50602082015181600101556040820151816002015550505060018080549050037fcd61ec3886ae430db8b51de7203ddb514e6b6d0d092a7ae47990ca87b9a0d322836040518082815260200191505060405180910390a25050565b60018054829081106104a757fe5b60009182526020918290206003919091020180546040805160026001841615610100026000190190931692909204601f8101859004850283018501909152808252919350918391908301828280156105405780601f1061051557610100808354040283529160200191610540565b820191906000526020600020905b81548152906001019060200180831161052357829003601f168201915b5050505050908060010154908060020154905083565b604080516080810182528281523360208083019190915242928201929092526001606082018190526000805491820180825590805282518051919460049093027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56301926105c8928492909101906109e2565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055505050506001600080549050037f046af898b9ce69726a7881a2f090dbdd06e11e8fa03b8f9f330a80354dee38b0826040518080602001828103825283818151815260200191508051906020019080838360005b838110156106a557818101518382015260200161068d565b50505050905090810190601f1680156106d25780820380516001836020036101000a031916815260200191505b509250505060405180910390a250565b60008054829081106106f057fe5b60009182526020918290206004919091020180546040805160026001841615610100026000190190931692909204601f8101859004850283018501909152808252919350918391908301828280156107895780601f1061075e57610100808354040283529160200191610789565b820191906000526020600020905b81548152906001019060200180831161076c57829003601f168201915b5050505060018301546002840154600390940154929373ffffffffffffffffffffffffffffffffffffffff9091169290915060ff1684565b60606000806107ce610a60565b60018054869081106107dc57fe5b600091825260209182902060408051600393909302909101805460026001821615610100026000190190911604601f810185900490940283016080908101909252606083018481529293909284929091849184018282801561087f5780601f106108545761010080835404028352916020019161087f565b820191906000526020600020905b81548152906001019060200180831161086257829003601f168201915b505050918352505060018201546020808301919091526002909201546040918201528251918301519201519097919650945092505050565b606060008060006108c6610a82565b60008054879081106108d457fe5b600091825260209182902060408051600493909302909101805460026001821615610100026000190190911604601f8101859004909402830160a090810190925260808301848152929390928492909184918401828280156109775780601f1061094c57610100808354040283529160200191610977565b820191906000526020600020905b81548152906001019060200180831161095a57829003601f168201915b5050509183525050600182015473ffffffffffffffffffffffffffffffffffffffff16602080830191909152600283015460408084019190915260039093015460ff161515606092830152835190840151928401519390910151909991985091965090945092505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610a2357805160ff1916838001178555610a50565b82800160010185558215610a50579182015b82811115610a50578251825591602001919060010190610a35565b50610a5c929150610aa9565b5090565b6060604051908101604052806060815260200160008152602001600081525090565b60408051608081018252606080825260006020830181905292820183905281019190915290565b610ac391905b80821115610a5c5760008155600101610aaf565b9056fea165627a7a723058202b411a05e2ffa5bd463d697faa8370282c83e42a9a5c017e3f8c9dfad9bd02a10029",
+  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631c3665eb811461007c5780632e4546cd146101385780639548ec7c146101e8578063a4de172d1461029b578063c956f14314610382578063f1a5c418146103ac575b600080fd5b34801561008857600080fd5b506101366004803603604081101561009f57600080fd5b813591908101906040810160208201356401000000008111156100c157600080fd5b8201836020820111156100d357600080fd5b803590602001918460018302840111640100000000831117156100f557600080fd5b91908080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920191909152509295506103d6945050505050565b005b34801561014457600080fd5b506101626004803603602081101561015b57600080fd5b5035610499565b6040518080602001848152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156101ab578181015183820152602001610193565b50505050905090810190601f1680156101d85780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b3480156101f457600080fd5b506101366004803603602081101561020b57600080fd5b81019060208101813564010000000081111561022657600080fd5b82018360208201111561023857600080fd5b8035906020019184600183028401116401000000008311171561025a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610556945050505050565b3480156102a757600080fd5b506102c5600480360360208110156102be57600080fd5b50356106e2565b60405180806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200184815260200183151515158152602001828103825286818151815260200191508051906020019080838360005b8381101561034457818101518382015260200161032c565b50505050905090810190601f1680156103715780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b34801561038e57600080fd5b50610162600480360360208110156103a557600080fd5b50356107c1565b3480156103b857600080fd5b506102c5600480360360208110156103cf57600080fd5b50356108b7565b60408051606081018252828152602080820185905242928201929092526001805480820180835560009290925282518051929460039092027fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6019261043e92849201906109e2565b50602082015181600101556040820151816002015550505060018080549050037fcd61ec3886ae430db8b51de7203ddb514e6b6d0d092a7ae47990ca87b9a0d322836040518082815260200191505060405180910390a25050565b60018054829081106104a757fe5b60009182526020918290206003919091020180546040805160026001841615610100026000190190931692909204601f8101859004850283018501909152808252919350918391908301828280156105405780601f1061051557610100808354040283529160200191610540565b820191906000526020600020905b81548152906001019060200180831161052357829003601f168201915b5050505050908060010154908060020154905083565b604080516080810182528281523360208083019190915242928201929092526001606082018190526000805491820180825590805282518051919460049093027f290decd9548b62a8d60345a988386fc84ba6bc95484008f6362f93160ef3e56301926105c8928492909101906109e2565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055505050506001600080549050037f046af898b9ce69726a7881a2f090dbdd06e11e8fa03b8f9f330a80354dee38b0826040518080602001828103825283818151815260200191508051906020019080838360005b838110156106a557818101518382015260200161068d565b50505050905090810190601f1680156106d25780820380516001836020036101000a031916815260200191505b509250505060405180910390a250565b60008054829081106106f057fe5b60009182526020918290206004919091020180546040805160026001841615610100026000190190931692909204601f8101859004850283018501909152808252919350918391908301828280156107895780601f1061075e57610100808354040283529160200191610789565b820191906000526020600020905b81548152906001019060200180831161076c57829003601f168201915b5050505060018301546002840154600390940154929373ffffffffffffffffffffffffffffffffffffffff9091169290915060ff1684565b60606000806107ce610a60565b60018054869081106107dc57fe5b600091825260209182902060408051600393909302909101805460026001821615610100026000190190911604601f810185900490940283016080908101909252606083018481529293909284929091849184018282801561087f5780601f106108545761010080835404028352916020019161087f565b820191906000526020600020905b81548152906001019060200180831161086257829003601f168201915b505050918352505060018201546020808301919091526002909201546040918201528251918301519201519097919650945092505050565b606060008060006108c6610a82565b60008054879081106108d457fe5b600091825260209182902060408051600493909302909101805460026001821615610100026000190190911604601f8101859004909402830160a090810190925260808301848152929390928492909184918401828280156109775780601f1061094c57610100808354040283529160200191610977565b820191906000526020600020905b81548152906001019060200180831161095a57829003601f168201915b5050509183525050600182015473ffffffffffffffffffffffffffffffffffffffff16602080830191909152600283015460408084019190915260039093015460ff161515606092830152835190840151928401519390910151909991985091965090945092505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610a2357805160ff1916838001178555610a50565b82800160010185558215610a50579182015b82811115610a50578251825591602001919060010190610a35565b50610a5c929150610aa9565b5090565b6060604051908101604052806060815260200160008152602001600081525090565b60408051608081018252606080825260006020830181905292820183905281019190915290565b610ac391905b80821115610a5c5760008155600101610aaf565b9056fea165627a7a723058202b411a05e2ffa5bd463d697faa8370282c83e42a9a5c017e3f8c9dfad9bd02a10029",
+  "sourceMap": "60:1455:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:1455:0;;;;;;;",
+  "deployedSourceMap": "60:1455:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;786:260;;8:9:-1;5:2;;;30:1;27;20:12;5:2;786:260:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;786:260:0;;;;;;;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;786:260:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;786:260:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;786:260:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;786:260:0;;-1:-1:-1;786:260:0;;-1:-1:-1;;;;;786:260:0;;;360:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;360:27:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;360:27:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;360:27:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;531:247;;8:9:-1;5:2;;;30:1;27;20:12;5:2;531:247:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;531:247:0;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;531:247:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;531:247:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;531:247:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;531:247:0;;-1:-1:-1;531:247:0;;-1:-1:-1;;;;;531:247:0;336:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;336:17:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;336:17:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;336:17:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1274:238;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1274:238:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1274:238:0;;;1054:212;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1054:212:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1054:212:0;;;786:260;882:95;;;;;;;;;;;;;;;;;;951:15;882:95;;;;;;;867:9;27:10:-1;;23:18;;;45:23;;;-1:-1;867:111:0;;;;;;;;23:18:-1;;867:111:0;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;1027:1;1008:9;:16;;;;:20;994:44;1030:7;994:44;;;;;;;;;;;;;;;;;;786:260;;:::o;360:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;360:27:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;360:27:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;531:247::-;603:112;;;;;;;;;;;645:10;603:112;;;;;;;;670:15;603:112;;;;;;;700:4;603:112;;;;;;593:4;27:10:-1;;23:18;;;45:23;;;593:123:0;;;;;;;23:18:-1;;593:123:0;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;757:1;743:4;:11;;;;:15;732:38;760:9;732:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;732:38:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;531:247;:::o;336:17::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;336:17:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;336:17:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;336:17:0;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;336:17:0;;;:::o;1274:238::-;1337:13;1352:7;1361;1381:24;;:::i;:::-;1408:9;:22;;1418:11;;1408:22;;;;;;;;;;;;;;;1381:49;;;1408:22;;;;;;;;1381:49;;;;;;;;;-1:-1:-1;;1381:49:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1408:22;;1381:49;;;;1408:22;;1381:49;;1408:22;1381:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1381:49:0;;;-1:-1:-1;;1381:49:0;;;;;;;;;;;;;;;;;;;;;;1449:17;;1468:15;;;;1485:18;;;1449:17;;1468:15;;-1:-1:-1;1485:18:0;-1:-1:-1;1274:238:0;-1:-1:-1;;;1274:238:0:o;1054:212::-;1107:13;1122:7;1131;1140:4;1157:14;;:::i;:::-;1174:4;:12;;1179:6;;1174:12;;;;;;;;;;;;;;;1157:29;;;1174:12;;;;;;;;1157:29;;;;;;;;;-1:-1:-1;;1157:29:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1174:12;;1157:29;;;;1174:12;;1157:29;;1174:12;1157:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1157:29:0;;;-1:-1:-1;;1157:29:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1205:12;;1219:11;;;;1232:13;;;;1247:10;;;;;1205:12;;1219:11;;-1:-1:-1;1232:13:0;;-1:-1:-1;1247:10:0;;-1:-1:-1;1054:212:0;-1:-1:-1;;;1054:212:0:o;60:1455::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;60:1455:0;;;-1:-1:-1;60:1455:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;-1:-1:-1;60:1455:0;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.5.0;\r\n\r\ncontract EvidenceTracker {\r\n    struct FIR {\r\n        string ipfsHash;\r\n        address officer;\r\n        uint256 timestamp;\r\n        bool isOpen;\r\n    }\r\n    \r\n    struct Evidence {\r\n        string ipfsHash;\r\n        uint256 caseId;\r\n        uint256 timestamp;\r\n    }\r\n\r\n    FIR[] public firs;\r\n    Evidence[] public evidences;\r\n\r\n    event FIRCreated(uint256 indexed firId, string ipfsHash);\r\n    event EvidenceAdded(uint256 indexed evidenceId, uint256 caseId);\r\n\r\n    function createFIR(string memory _ipfsHash) public {\r\n        firs.push(FIR(\r\n            _ipfsHash,\r\n            msg.sender,\r\n            block.timestamp,\r\n            true\r\n        ));\r\n        emit FIRCreated(firs.length - 1, _ipfsHash);\r\n    }\r\n\r\n    function addEvidence(uint256 _caseId, string memory _ipfsHash) public {\r\n        evidences.push(Evidence(\r\n            _ipfsHash,\r\n            _caseId,\r\n            block.timestamp\r\n        ));\r\n        emit EvidenceAdded(evidences.length - 1, _caseId);\r\n    }\r\n\r\n    function getFIR(uint256 _firId) public view returns (string memory, address, uint256, bool) {\r\n        FIR memory fir = firs[_firId];\r\n        return (fir.ipfsHash, fir.officer, fir.timestamp, fir.isOpen);\r\n    }\r\n\r\n    function getEvidence(uint256 _evidenceId) public view returns (string memory, uint256, uint256) {\r\n        Evidence memory evidence = evidences[_evidenceId];\r\n        return (evidence.ipfsHash, evidence.caseId, evidence.timestamp);\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\kjalf\\AndroidStudioProjects\\newsecure\\blockchain\\contracts\\Evidence.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Evidence.sol",
+    "exportedSymbols": {
+      "EvidenceTracker": [
+        146
+      ]
+    },
+    "id": 147,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 146,
+        "linearizedBaseContracts": [
+          146
+        ],
+        "name": "EvidenceTracker",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "EvidenceTracker.FIR",
+            "id": 10,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "ipfsHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "114:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "name": "officer",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "140:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "140:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "166:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "166:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "isOpen",
+                "nodeType": "VariableDeclaration",
+                "scope": 10,
+                "src": "194:11:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "194:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "FIR",
+            "nodeType": "StructDefinition",
+            "scope": 146,
+            "src": "92:121:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "EvidenceTracker.Evidence",
+            "id": 17,
+            "members": [
+              {
+                "constant": false,
+                "id": 12,
+                "name": "ipfsHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "252:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "252:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "caseId",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "278:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "278:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "303:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "303:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Evidence",
+            "nodeType": "StructDefinition",
+            "scope": 146,
+            "src": "225:103:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 20,
+            "name": "firs",
+            "nodeType": "VariableDeclaration",
+            "scope": 146,
+            "src": "336:17:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_FIR_$10_storage_$dyn_storage",
+              "typeString": "struct EvidenceTracker.FIR[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 18,
+                "name": "FIR",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 10,
+                "src": "336:3:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_FIR_$10_storage_ptr",
+                  "typeString": "struct EvidenceTracker.FIR"
+                }
+              },
+              "id": 19,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "336:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_FIR_$10_storage_$dyn_storage_ptr",
+                "typeString": "struct EvidenceTracker.FIR[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 23,
+            "name": "evidences",
+            "nodeType": "VariableDeclaration",
+            "scope": 146,
+            "src": "360:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Evidence_$17_storage_$dyn_storage",
+              "typeString": "struct EvidenceTracker.Evidence[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 21,
+                "name": "Evidence",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 17,
+                "src": "360:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Evidence_$17_storage_ptr",
+                  "typeString": "struct EvidenceTracker.Evidence"
+                }
+              },
+              "id": 22,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "360:10:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Evidence_$17_storage_$dyn_storage_ptr",
+                "typeString": "struct EvidenceTracker.Evidence[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 29,
+            "name": "FIRCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 25,
+                  "indexed": true,
+                  "name": "firId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29,
+                  "src": "413:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "413:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27,
+                  "indexed": false,
+                  "name": "ipfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29,
+                  "src": "436:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "436:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "412:40:0"
+            },
+            "src": "396:57:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 35,
+            "name": "EvidenceAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 31,
+                  "indexed": true,
+                  "name": "evidenceId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "479:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "479:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33,
+                  "indexed": false,
+                  "name": "caseId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "507:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "507:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "478:44:0"
+            },
+            "src": "459:64:0"
+          },
+          {
+            "body": {
+              "id": 61,
+              "nodeType": "Block",
+              "src": "582:196:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 44,
+                            "name": "_ipfsHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 37,
+                            "src": "621:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 45,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 161,
+                              "src": "645:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 46,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "645:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 47,
+                              "name": "block",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 151,
+                              "src": "670:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_block",
+                                "typeString": "block"
+                              }
+                            },
+                            "id": 48,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "timestamp",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "670:15:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "74727565",
+                            "id": 49,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "bool",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "700:4:0",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            "value": "true"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          ],
+                          "id": 43,
+                          "name": "FIR",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10,
+                          "src": "603:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_FIR_$10_storage_ptr_$",
+                            "typeString": "type(struct EvidenceTracker.FIR storage pointer)"
+                          }
+                        },
+                        "id": 50,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "603:112:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FIR_$10_memory",
+                          "typeString": "struct EvidenceTracker.FIR memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_FIR_$10_memory",
+                          "typeString": "struct EvidenceTracker.FIR memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 40,
+                        "name": "firs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 20,
+                        "src": "593:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_FIR_$10_storage_$dyn_storage",
+                          "typeString": "struct EvidenceTracker.FIR storage ref[] storage ref"
+                        }
+                      },
+                      "id": 42,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "593:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_FIR_$10_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct EvidenceTracker.FIR storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 51,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "593:123:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 52,
+                  "nodeType": "ExpressionStatement",
+                  "src": "593:123:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 57,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 54,
+                            "name": "firs",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 20,
+                            "src": "743:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_FIR_$10_storage_$dyn_storage",
+                              "typeString": "struct EvidenceTracker.FIR storage ref[] storage ref"
+                            }
+                          },
+                          "id": 55,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "743:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "-",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 56,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "757:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "src": "743:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 58,
+                        "name": "_ipfsHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 37,
+                        "src": "760:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 53,
+                      "name": "FIRCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 29,
+                      "src": "732:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,string memory)"
+                      }
+                    },
+                    "id": 59,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "732:38:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 60,
+                  "nodeType": "EmitStatement",
+                  "src": "727:43:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 62,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createFIR",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 38,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37,
+                  "name": "_ipfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 62,
+                  "src": "550:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "550:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "549:25:0"
+            },
+            "returnParameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "582:0:0"
+            },
+            "scope": 146,
+            "src": "531:247:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 88,
+              "nodeType": "Block",
+              "src": "856:190:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 73,
+                            "name": "_ipfsHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 66,
+                            "src": "905:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 74,
+                            "name": "_caseId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 64,
+                            "src": "929:7:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 75,
+                              "name": "block",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 151,
+                              "src": "951:5:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_block",
+                                "typeString": "block"
+                              }
+                            },
+                            "id": 76,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "timestamp",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "951:15:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 72,
+                          "name": "Evidence",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 17,
+                          "src": "882:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Evidence_$17_storage_ptr_$",
+                            "typeString": "type(struct EvidenceTracker.Evidence storage pointer)"
+                          }
+                        },
+                        "id": 77,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "882:95:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Evidence_$17_memory",
+                          "typeString": "struct EvidenceTracker.Evidence memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Evidence_$17_memory",
+                          "typeString": "struct EvidenceTracker.Evidence memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "evidences",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 23,
+                        "src": "867:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Evidence_$17_storage_$dyn_storage",
+                          "typeString": "struct EvidenceTracker.Evidence storage ref[] storage ref"
+                        }
+                      },
+                      "id": 71,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "867:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Evidence_$17_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct EvidenceTracker.Evidence storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 78,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "867:111:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 79,
+                  "nodeType": "ExpressionStatement",
+                  "src": "867:111:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 84,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 81,
+                            "name": "evidences",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 23,
+                            "src": "1008:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_Evidence_$17_storage_$dyn_storage",
+                              "typeString": "struct EvidenceTracker.Evidence storage ref[] storage ref"
+                            }
+                          },
+                          "id": 82,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1008:16:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "-",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 83,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1027:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "src": "1008:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 85,
+                        "name": "_caseId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64,
+                        "src": "1030:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 80,
+                      "name": "EvidenceAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35,
+                      "src": "994:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 86,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "994:44:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 87,
+                  "nodeType": "EmitStatement",
+                  "src": "989:49:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 89,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addEvidence",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 64,
+                  "name": "_caseId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "807:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "807:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 66,
+                  "name": "_ipfsHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "824:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "806:42:0"
+            },
+            "returnParameters": {
+              "id": 68,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "856:0:0"
+            },
+            "scope": 146,
+            "src": "786:260:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 118,
+              "nodeType": "Block",
+              "src": "1146:120:0",
+              "statements": [
+                {
+                  "assignments": [
+                    103
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 103,
+                      "name": "fir",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 118,
+                      "src": "1157:14:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_FIR_$10_memory_ptr",
+                        "typeString": "struct EvidenceTracker.FIR"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 102,
+                        "name": "FIR",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 10,
+                        "src": "1157:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FIR_$10_storage_ptr",
+                          "typeString": "struct EvidenceTracker.FIR"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 107,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 104,
+                      "name": "firs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 20,
+                      "src": "1174:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_FIR_$10_storage_$dyn_storage",
+                        "typeString": "struct EvidenceTracker.FIR storage ref[] storage ref"
+                      }
+                    },
+                    "id": 106,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 105,
+                      "name": "_firId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 91,
+                      "src": "1179:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1174:12:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FIR_$10_storage",
+                      "typeString": "struct EvidenceTracker.FIR storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1157:29:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 108,
+                          "name": "fir",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 103,
+                          "src": "1205:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FIR_$10_memory_ptr",
+                            "typeString": "struct EvidenceTracker.FIR memory"
+                          }
+                        },
+                        "id": 109,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "ipfsHash",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 3,
+                        "src": "1205:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 110,
+                          "name": "fir",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 103,
+                          "src": "1219:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FIR_$10_memory_ptr",
+                            "typeString": "struct EvidenceTracker.FIR memory"
+                          }
+                        },
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "officer",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 5,
+                        "src": "1219:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 112,
+                          "name": "fir",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 103,
+                          "src": "1232:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FIR_$10_memory_ptr",
+                            "typeString": "struct EvidenceTracker.FIR memory"
+                          }
+                        },
+                        "id": 113,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 7,
+                        "src": "1232:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 114,
+                          "name": "fir",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 103,
+                          "src": "1247:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FIR_$10_memory_ptr",
+                            "typeString": "struct EvidenceTracker.FIR memory"
+                          }
+                        },
+                        "id": 115,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "isOpen",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 9,
+                        "src": "1247:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "id": 116,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1204:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_$_t_address_$_t_uint256_$_t_bool_$",
+                      "typeString": "tuple(string memory,address,uint256,bool)"
+                    }
+                  },
+                  "functionReturnParameters": 101,
+                  "id": 117,
+                  "nodeType": "Return",
+                  "src": "1197:61:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 119,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFIR",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "_firId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 119,
+                  "src": "1070:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1070:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1069:16:0"
+            },
+            "returnParameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 94,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 119,
+                  "src": "1107:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 93,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1107:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 96,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 119,
+                  "src": "1122:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 95,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1122:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 98,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 119,
+                  "src": "1131:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 97,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1131:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 100,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 119,
+                  "src": "1140:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 99,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1140:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1106:39:0"
+            },
+            "scope": 146,
+            "src": "1054:212:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 144,
+              "nodeType": "Block",
+              "src": "1370:142:0",
+              "statements": [
+                {
+                  "assignments": [
+                    131
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 131,
+                      "name": "evidence",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 144,
+                      "src": "1381:24:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Evidence_$17_memory_ptr",
+                        "typeString": "struct EvidenceTracker.Evidence"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 130,
+                        "name": "Evidence",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 17,
+                        "src": "1381:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Evidence_$17_storage_ptr",
+                          "typeString": "struct EvidenceTracker.Evidence"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 135,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 132,
+                      "name": "evidences",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 23,
+                      "src": "1408:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_Evidence_$17_storage_$dyn_storage",
+                        "typeString": "struct EvidenceTracker.Evidence storage ref[] storage ref"
+                      }
+                    },
+                    "id": 134,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 133,
+                      "name": "_evidenceId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 121,
+                      "src": "1418:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1408:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Evidence_$17_storage",
+                      "typeString": "struct EvidenceTracker.Evidence storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1381:49:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 136,
+                          "name": "evidence",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 131,
+                          "src": "1449:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Evidence_$17_memory_ptr",
+                            "typeString": "struct EvidenceTracker.Evidence memory"
+                          }
+                        },
+                        "id": 137,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "ipfsHash",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 12,
+                        "src": "1449:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 138,
+                          "name": "evidence",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 131,
+                          "src": "1468:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Evidence_$17_memory_ptr",
+                            "typeString": "struct EvidenceTracker.Evidence memory"
+                          }
+                        },
+                        "id": 139,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "caseId",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 14,
+                        "src": "1468:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 140,
+                          "name": "evidence",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 131,
+                          "src": "1485:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Evidence_$17_memory_ptr",
+                            "typeString": "struct EvidenceTracker.Evidence memory"
+                          }
+                        },
+                        "id": 141,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 16,
+                        "src": "1485:18:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 142,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1448:56:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_memory_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(string memory,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 129,
+                  "id": 143,
+                  "nodeType": "Return",
+                  "src": "1441:63:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 145,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEvidence",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 122,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 121,
+                  "name": "_evidenceId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 145,
+                  "src": "1295:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 120,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1295:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1294:21:0"
+            },
+            "returnParameters": {
+              "id": 129,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 124,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 145,
+                  "src": "1337:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 123,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1337:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 126,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 145,
+                  "src": "1352:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 125,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1352:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 128,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 145,
+                  "src": "1361:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 127,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1361:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1336:33:0"
+            },
+            "scope": 146,
+            "src": "1274:238:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 147,
+        "src": "60:1455:0"
+      }
+    ],
+    "src": "33:1482:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Evidence.sol",
+      "exportedSymbols": {
+        "EvidenceTracker": [
+          146
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "33:23:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            146
+          ],
+          "name": "EvidenceTracker",
+          "scope": 147
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "EvidenceTracker.FIR",
+              "name": "FIR",
+              "scope": 146,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ipfsHash",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "114:6:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "114:15:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "officer",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "140:7:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "140:15:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "timestamp",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "166:7:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "166:17:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "isOpen",
+                  "scope": 10,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "194:4:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "194:11:0"
+              }
+            ],
+            "id": 10,
+            "name": "StructDefinition",
+            "src": "92:121:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "EvidenceTracker.Evidence",
+              "name": "Evidence",
+              "scope": 146,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ipfsHash",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 11,
+                    "name": "ElementaryTypeName",
+                    "src": "252:6:0"
+                  }
+                ],
+                "id": 12,
+                "name": "VariableDeclaration",
+                "src": "252:15:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "caseId",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 13,
+                    "name": "ElementaryTypeName",
+                    "src": "278:7:0"
+                  }
+                ],
+                "id": 14,
+                "name": "VariableDeclaration",
+                "src": "278:14:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "timestamp",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 15,
+                    "name": "ElementaryTypeName",
+                    "src": "303:7:0"
+                  }
+                ],
+                "id": 16,
+                "name": "VariableDeclaration",
+                "src": "303:17:0"
+              }
+            ],
+            "id": 17,
+            "name": "StructDefinition",
+            "src": "225:103:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "firs",
+              "scope": 146,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct EvidenceTracker.FIR[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct EvidenceTracker.FIR[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "FIR",
+                      "referencedDeclaration": 10,
+                      "type": "struct EvidenceTracker.FIR"
+                    },
+                    "id": 18,
+                    "name": "UserDefinedTypeName",
+                    "src": "336:3:0"
+                  }
+                ],
+                "id": 19,
+                "name": "ArrayTypeName",
+                "src": "336:5:0"
+              }
+            ],
+            "id": 20,
+            "name": "VariableDeclaration",
+            "src": "336:17:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "evidences",
+              "scope": 146,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct EvidenceTracker.Evidence[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct EvidenceTracker.Evidence[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Evidence",
+                      "referencedDeclaration": 17,
+                      "type": "struct EvidenceTracker.Evidence"
+                    },
+                    "id": 21,
+                    "name": "UserDefinedTypeName",
+                    "src": "360:8:0"
+                  }
+                ],
+                "id": 22,
+                "name": "ArrayTypeName",
+                "src": "360:10:0"
+              }
+            ],
+            "id": 23,
+            "name": "VariableDeclaration",
+            "src": "360:27:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "FIRCreated"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "firId",
+                      "scope": 29,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 24,
+                        "name": "ElementaryTypeName",
+                        "src": "413:7:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "VariableDeclaration",
+                    "src": "413:21:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "ipfsHash",
+                      "scope": 29,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 26,
+                        "name": "ElementaryTypeName",
+                        "src": "436:6:0"
+                      }
+                    ],
+                    "id": 27,
+                    "name": "VariableDeclaration",
+                    "src": "436:15:0"
+                  }
+                ],
+                "id": 28,
+                "name": "ParameterList",
+                "src": "412:40:0"
+              }
+            ],
+            "id": 29,
+            "name": "EventDefinition",
+            "src": "396:57:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "EvidenceAdded"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "evidenceId",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 30,
+                        "name": "ElementaryTypeName",
+                        "src": "479:7:0"
+                      }
+                    ],
+                    "id": 31,
+                    "name": "VariableDeclaration",
+                    "src": "479:26:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "caseId",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 32,
+                        "name": "ElementaryTypeName",
+                        "src": "507:7:0"
+                      }
+                    ],
+                    "id": 33,
+                    "name": "VariableDeclaration",
+                    "src": "507:14:0"
+                  }
+                ],
+                "id": 34,
+                "name": "ParameterList",
+                "src": "478:44:0"
+              }
+            ],
+            "id": 35,
+            "name": "EventDefinition",
+            "src": "459:64:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createFIR",
+              "scope": 146,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_ipfsHash",
+                      "scope": 62,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 36,
+                        "name": "ElementaryTypeName",
+                        "src": "550:6:0"
+                      }
+                    ],
+                    "id": 37,
+                    "name": "VariableDeclaration",
+                    "src": "550:23:0"
+                  }
+                ],
+                "id": 38,
+                "name": "ParameterList",
+                "src": "549:25:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 39,
+                "name": "ParameterList",
+                "src": "582:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_FIR_$10_memory",
+                                  "typeString": "struct EvidenceTracker.FIR memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct EvidenceTracker.FIR storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 20,
+                                  "type": "struct EvidenceTracker.FIR storage ref[] storage ref",
+                                  "value": "firs"
+                                },
+                                "id": 40,
+                                "name": "Identifier",
+                                "src": "593:4:0"
+                              }
+                            ],
+                            "id": 42,
+                            "name": "MemberAccess",
+                            "src": "593:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct EvidenceTracker.FIR memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "type(struct EvidenceTracker.FIR storage pointer)",
+                                  "value": "FIR"
+                                },
+                                "id": 43,
+                                "name": "Identifier",
+                                "src": "603:3:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 37,
+                                  "type": "string memory",
+                                  "value": "_ipfsHash"
+                                },
+                                "id": 44,
+                                "name": "Identifier",
+                                "src": "621:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 161,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 45,
+                                    "name": "Identifier",
+                                    "src": "645:3:0"
+                                  }
+                                ],
+                                "id": 46,
+                                "name": "MemberAccess",
+                                "src": "645:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "timestamp",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 151,
+                                      "type": "block",
+                                      "value": "block"
+                                    },
+                                    "id": 47,
+                                    "name": "Identifier",
+                                    "src": "670:5:0"
+                                  }
+                                ],
+                                "id": 48,
+                                "name": "MemberAccess",
+                                "src": "670:15:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "74727565",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "bool",
+                                  "type": "bool",
+                                  "value": "true"
+                                },
+                                "id": 49,
+                                "name": "Literal",
+                                "src": "700:4:0"
+                              }
+                            ],
+                            "id": 50,
+                            "name": "FunctionCall",
+                            "src": "603:112:0"
+                          }
+                        ],
+                        "id": 51,
+                        "name": "FunctionCall",
+                        "src": "593:123:0"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "ExpressionStatement",
+                    "src": "593:123:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 29,
+                              "type": "function (uint256,string memory)",
+                              "value": "FIRCreated"
+                            },
+                            "id": 53,
+                            "name": "Identifier",
+                            "src": "732:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "-",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "length",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 20,
+                                      "type": "struct EvidenceTracker.FIR storage ref[] storage ref",
+                                      "value": "firs"
+                                    },
+                                    "id": 54,
+                                    "name": "Identifier",
+                                    "src": "743:4:0"
+                                  }
+                                ],
+                                "id": 55,
+                                "name": "MemberAccess",
+                                "src": "743:11:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "31",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 1",
+                                  "value": "1"
+                                },
+                                "id": 56,
+                                "name": "Literal",
+                                "src": "757:1:0"
+                              }
+                            ],
+                            "id": 57,
+                            "name": "BinaryOperation",
+                            "src": "743:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "string memory",
+                              "value": "_ipfsHash"
+                            },
+                            "id": 58,
+                            "name": "Identifier",
+                            "src": "760:9:0"
+                          }
+                        ],
+                        "id": 59,
+                        "name": "FunctionCall",
+                        "src": "732:38:0"
+                      }
+                    ],
+                    "id": 60,
+                    "name": "EmitStatement",
+                    "src": "727:43:0"
+                  }
+                ],
+                "id": 61,
+                "name": "Block",
+                "src": "582:196:0"
+              }
+            ],
+            "id": 62,
+            "name": "FunctionDefinition",
+            "src": "531:247:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addEvidence",
+              "scope": 146,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_caseId",
+                      "scope": 89,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 63,
+                        "name": "ElementaryTypeName",
+                        "src": "807:7:0"
+                      }
+                    ],
+                    "id": 64,
+                    "name": "VariableDeclaration",
+                    "src": "807:15:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_ipfsHash",
+                      "scope": 89,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 65,
+                        "name": "ElementaryTypeName",
+                        "src": "824:6:0"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "VariableDeclaration",
+                    "src": "824:23:0"
+                  }
+                ],
+                "id": 67,
+                "name": "ParameterList",
+                "src": "806:42:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 68,
+                "name": "ParameterList",
+                "src": "856:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_Evidence_$17_memory",
+                                  "typeString": "struct EvidenceTracker.Evidence memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct EvidenceTracker.Evidence storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 23,
+                                  "type": "struct EvidenceTracker.Evidence storage ref[] storage ref",
+                                  "value": "evidences"
+                                },
+                                "id": 69,
+                                "name": "Identifier",
+                                "src": "867:9:0"
+                              }
+                            ],
+                            "id": 71,
+                            "name": "MemberAccess",
+                            "src": "867:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct EvidenceTracker.Evidence memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 17,
+                                  "type": "type(struct EvidenceTracker.Evidence storage pointer)",
+                                  "value": "Evidence"
+                                },
+                                "id": 72,
+                                "name": "Identifier",
+                                "src": "882:8:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 66,
+                                  "type": "string memory",
+                                  "value": "_ipfsHash"
+                                },
+                                "id": 73,
+                                "name": "Identifier",
+                                "src": "905:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 64,
+                                  "type": "uint256",
+                                  "value": "_caseId"
+                                },
+                                "id": 74,
+                                "name": "Identifier",
+                                "src": "929:7:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "timestamp",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 151,
+                                      "type": "block",
+                                      "value": "block"
+                                    },
+                                    "id": 75,
+                                    "name": "Identifier",
+                                    "src": "951:5:0"
+                                  }
+                                ],
+                                "id": 76,
+                                "name": "MemberAccess",
+                                "src": "951:15:0"
+                              }
+                            ],
+                            "id": 77,
+                            "name": "FunctionCall",
+                            "src": "882:95:0"
+                          }
+                        ],
+                        "id": 78,
+                        "name": "FunctionCall",
+                        "src": "867:111:0"
+                      }
+                    ],
+                    "id": 79,
+                    "name": "ExpressionStatement",
+                    "src": "867:111:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 35,
+                              "type": "function (uint256,uint256)",
+                              "value": "EvidenceAdded"
+                            },
+                            "id": 80,
+                            "name": "Identifier",
+                            "src": "994:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "-",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "length",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 23,
+                                      "type": "struct EvidenceTracker.Evidence storage ref[] storage ref",
+                                      "value": "evidences"
+                                    },
+                                    "id": 81,
+                                    "name": "Identifier",
+                                    "src": "1008:9:0"
+                                  }
+                                ],
+                                "id": 82,
+                                "name": "MemberAccess",
+                                "src": "1008:16:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "31",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 1",
+                                  "value": "1"
+                                },
+                                "id": 83,
+                                "name": "Literal",
+                                "src": "1027:1:0"
+                              }
+                            ],
+                            "id": 84,
+                            "name": "BinaryOperation",
+                            "src": "1008:20:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 64,
+                              "type": "uint256",
+                              "value": "_caseId"
+                            },
+                            "id": 85,
+                            "name": "Identifier",
+                            "src": "1030:7:0"
+                          }
+                        ],
+                        "id": 86,
+                        "name": "FunctionCall",
+                        "src": "994:44:0"
+                      }
+                    ],
+                    "id": 87,
+                    "name": "EmitStatement",
+                    "src": "989:49:0"
+                  }
+                ],
+                "id": 88,
+                "name": "Block",
+                "src": "856:190:0"
+              }
+            ],
+            "id": 89,
+            "name": "FunctionDefinition",
+            "src": "786:260:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getFIR",
+              "scope": 146,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_firId",
+                      "scope": 119,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 90,
+                        "name": "ElementaryTypeName",
+                        "src": "1070:7:0"
+                      }
+                    ],
+                    "id": 91,
+                    "name": "VariableDeclaration",
+                    "src": "1070:14:0"
+                  }
+                ],
+                "id": 92,
+                "name": "ParameterList",
+                "src": "1069:16:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 119,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 93,
+                        "name": "ElementaryTypeName",
+                        "src": "1107:6:0"
+                      }
+                    ],
+                    "id": 94,
+                    "name": "VariableDeclaration",
+                    "src": "1107:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 119,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 95,
+                        "name": "ElementaryTypeName",
+                        "src": "1122:7:0"
+                      }
+                    ],
+                    "id": 96,
+                    "name": "VariableDeclaration",
+                    "src": "1122:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 119,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 97,
+                        "name": "ElementaryTypeName",
+                        "src": "1131:7:0"
+                      }
+                    ],
+                    "id": 98,
+                    "name": "VariableDeclaration",
+                    "src": "1131:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 119,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 99,
+                        "name": "ElementaryTypeName",
+                        "src": "1140:4:0"
+                      }
+                    ],
+                    "id": 100,
+                    "name": "VariableDeclaration",
+                    "src": "1140:4:0"
+                  }
+                ],
+                "id": 101,
+                "name": "ParameterList",
+                "src": "1106:39:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        103
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "fir",
+                          "scope": 118,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct EvidenceTracker.FIR",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "FIR",
+                              "referencedDeclaration": 10,
+                              "type": "struct EvidenceTracker.FIR"
+                            },
+                            "id": 102,
+                            "name": "UserDefinedTypeName",
+                            "src": "1157:3:0"
+                          }
+                        ],
+                        "id": 103,
+                        "name": "VariableDeclaration",
+                        "src": "1157:14:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct EvidenceTracker.FIR storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 20,
+                              "type": "struct EvidenceTracker.FIR storage ref[] storage ref",
+                              "value": "firs"
+                            },
+                            "id": 104,
+                            "name": "Identifier",
+                            "src": "1174:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 91,
+                              "type": "uint256",
+                              "value": "_firId"
+                            },
+                            "id": 105,
+                            "name": "Identifier",
+                            "src": "1179:6:0"
+                          }
+                        ],
+                        "id": 106,
+                        "name": "IndexAccess",
+                        "src": "1174:12:0"
+                      }
+                    ],
+                    "id": 107,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1157:29:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 101
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(string memory,address,uint256,bool)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "ipfsHash",
+                              "referencedDeclaration": 3,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 103,
+                                  "type": "struct EvidenceTracker.FIR memory",
+                                  "value": "fir"
+                                },
+                                "id": 108,
+                                "name": "Identifier",
+                                "src": "1205:3:0"
+                              }
+                            ],
+                            "id": 109,
+                            "name": "MemberAccess",
+                            "src": "1205:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "officer",
+                              "referencedDeclaration": 5,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 103,
+                                  "type": "struct EvidenceTracker.FIR memory",
+                                  "value": "fir"
+                                },
+                                "id": 110,
+                                "name": "Identifier",
+                                "src": "1219:3:0"
+                              }
+                            ],
+                            "id": 111,
+                            "name": "MemberAccess",
+                            "src": "1219:11:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": 7,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 103,
+                                  "type": "struct EvidenceTracker.FIR memory",
+                                  "value": "fir"
+                                },
+                                "id": 112,
+                                "name": "Identifier",
+                                "src": "1232:3:0"
+                              }
+                            ],
+                            "id": 113,
+                            "name": "MemberAccess",
+                            "src": "1232:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "isOpen",
+                              "referencedDeclaration": 9,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 103,
+                                  "type": "struct EvidenceTracker.FIR memory",
+                                  "value": "fir"
+                                },
+                                "id": 114,
+                                "name": "Identifier",
+                                "src": "1247:3:0"
+                              }
+                            ],
+                            "id": 115,
+                            "name": "MemberAccess",
+                            "src": "1247:10:0"
+                          }
+                        ],
+                        "id": 116,
+                        "name": "TupleExpression",
+                        "src": "1204:54:0"
+                      }
+                    ],
+                    "id": 117,
+                    "name": "Return",
+                    "src": "1197:61:0"
+                  }
+                ],
+                "id": 118,
+                "name": "Block",
+                "src": "1146:120:0"
+              }
+            ],
+            "id": 119,
+            "name": "FunctionDefinition",
+            "src": "1054:212:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getEvidence",
+              "scope": 146,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_evidenceId",
+                      "scope": 145,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 120,
+                        "name": "ElementaryTypeName",
+                        "src": "1295:7:0"
+                      }
+                    ],
+                    "id": 121,
+                    "name": "VariableDeclaration",
+                    "src": "1295:19:0"
+                  }
+                ],
+                "id": 122,
+                "name": "ParameterList",
+                "src": "1294:21:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 145,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 123,
+                        "name": "ElementaryTypeName",
+                        "src": "1337:6:0"
+                      }
+                    ],
+                    "id": 124,
+                    "name": "VariableDeclaration",
+                    "src": "1337:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 145,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 125,
+                        "name": "ElementaryTypeName",
+                        "src": "1352:7:0"
+                      }
+                    ],
+                    "id": 126,
+                    "name": "VariableDeclaration",
+                    "src": "1352:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 145,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 127,
+                        "name": "ElementaryTypeName",
+                        "src": "1361:7:0"
+                      }
+                    ],
+                    "id": 128,
+                    "name": "VariableDeclaration",
+                    "src": "1361:7:0"
+                  }
+                ],
+                "id": 129,
+                "name": "ParameterList",
+                "src": "1336:33:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        131
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "evidence",
+                          "scope": 144,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct EvidenceTracker.Evidence",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Evidence",
+                              "referencedDeclaration": 17,
+                              "type": "struct EvidenceTracker.Evidence"
+                            },
+                            "id": 130,
+                            "name": "UserDefinedTypeName",
+                            "src": "1381:8:0"
+                          }
+                        ],
+                        "id": 131,
+                        "name": "VariableDeclaration",
+                        "src": "1381:24:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct EvidenceTracker.Evidence storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 23,
+                              "type": "struct EvidenceTracker.Evidence storage ref[] storage ref",
+                              "value": "evidences"
+                            },
+                            "id": 132,
+                            "name": "Identifier",
+                            "src": "1408:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 121,
+                              "type": "uint256",
+                              "value": "_evidenceId"
+                            },
+                            "id": 133,
+                            "name": "Identifier",
+                            "src": "1418:11:0"
+                          }
+                        ],
+                        "id": 134,
+                        "name": "IndexAccess",
+                        "src": "1408:22:0"
+                      }
+                    ],
+                    "id": 135,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1381:49:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 129
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(string memory,uint256,uint256)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "ipfsHash",
+                              "referencedDeclaration": 12,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 131,
+                                  "type": "struct EvidenceTracker.Evidence memory",
+                                  "value": "evidence"
+                                },
+                                "id": 136,
+                                "name": "Identifier",
+                                "src": "1449:8:0"
+                              }
+                            ],
+                            "id": 137,
+                            "name": "MemberAccess",
+                            "src": "1449:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "caseId",
+                              "referencedDeclaration": 14,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 131,
+                                  "type": "struct EvidenceTracker.Evidence memory",
+                                  "value": "evidence"
+                                },
+                                "id": 138,
+                                "name": "Identifier",
+                                "src": "1468:8:0"
+                              }
+                            ],
+                            "id": 139,
+                            "name": "MemberAccess",
+                            "src": "1468:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": 16,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 131,
+                                  "type": "struct EvidenceTracker.Evidence memory",
+                                  "value": "evidence"
+                                },
+                                "id": 140,
+                                "name": "Identifier",
+                                "src": "1485:8:0"
+                              }
+                            ],
+                            "id": 141,
+                            "name": "MemberAccess",
+                            "src": "1485:18:0"
+                          }
+                        ],
+                        "id": 142,
+                        "name": "TupleExpression",
+                        "src": "1448:56:0"
+                      }
+                    ],
+                    "id": 143,
+                    "name": "Return",
+                    "src": "1441:63:0"
+                  }
+                ],
+                "id": 144,
+                "name": "Block",
+                "src": "1370:142:0"
+              }
+            ],
+            "id": 145,
+            "name": "FunctionDefinition",
+            "src": "1274:238:0"
+          }
+        ],
+        "id": 146,
+        "name": "ContractDefinition",
+        "src": "60:1455:0"
+      }
+    ],
+    "id": 147,
+    "name": "SourceUnit",
+    "src": "33:1482:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "1337": {
+      "events": {},
+      "links": {},
+      "address": "0x889aA157c1D37F57EF8251286798C66C1b312067",
+      "transactionHash": "0x4da01d95388100c60212aee7f137607fe26cad9a8f153e614273212fe5b3b850"
+    },
+    "1740845654332": {
+      "events": {},
+      "links": {},
+      "address": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "transactionHash": "0xb5272a563a08b4745e1989a7dff7e4a35466ad499d8d6ecc42fc5b0b8c2bad57"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-03-01T23:17:00.653Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

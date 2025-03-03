@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: blockchain
+Version: 0.1
+Requires-Dist: web3>=6.0.0
+Dynamic: requires-dist
